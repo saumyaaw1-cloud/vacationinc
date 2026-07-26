@@ -25,7 +25,7 @@ const evidence = {
   sony: {
     label: "EVIDENCE 02 / AUDIENCE EXPERIENCE",
     title: "From concept to an environment people could enter.",
-    copy: "At Sony, I directed immersive experiences for dome and spatial environments, then worked with engineers and creatives to test, refine, and prepare every element for the audience—not just the presentation deck.",
+    copy: "At Sony, I directed immersive experiences for dome and spatial environments, then worked with engineers and creatives to test, refine, and prepare every element for the audience.",
   },
   nbc: {
     label: "EVIDENCE 03 / RESEARCH + DELIVERY",
