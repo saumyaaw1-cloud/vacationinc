@@ -1,36 +1,36 @@
 const roles = {
   launch: {
     kicker: "RECOMMENDED PLACEMENT: A",
-    title: "Make the idea easy to want—and easy to launch.",
-    proof: "Proof: pitched, built, and rolled out a new resource used by 100 Disney teammates.",
+    title: "Put me where campaigns, events, partnerships, and production meet.",
+    proof: "I’ve already directed audience-facing experiences, shipped an original digital activation, and carried ambitious creative work from concept through live execution.",
   },
   experience: {
     kicker: "RECOMMENDED PLACEMENT: B",
-    title: "Turn the brand world into something people can enter.",
-    proof: "Proof: built immersive and spatial experiences across Sony, NBCUniversal, and USC.",
+    title: "Keep the ambitious idea—and everyone behind it—moving.",
+    proof: "At Disney, I bridge engineering, production, and creative—and launched a resource that became part of how a 100-person team works.",
   },
   special: {
     kicker: "RECOMMENDED PLACEMENT: C",
-    title: "Take the strange brief from “maybe” to “it’s live.”",
-    proof: "Proof: translates between creative, engineering, production, and real-world operators.",
+    title: "Take the unexpected collaboration from pitch to poolside.",
+    proof: "I’ve researched and pitched emerging ideas, presented projects to senior executives, and translated unconventional concepts into finished experiences.",
   },
 };
 
 const evidence = {
   disney: {
-    label: "EVIDENCE 01 / OWNERSHIP",
-    title: "Disney",
-    copy: "Identified a team need, built a new resource from scratch, and rolled it out across a 100-person production team.",
+    label: "EVIDENCE 01 / OWNERSHIP + ADOPTION",
+    title: "From zero to 100 users.",
+    copy: "At Disney, I spotted a real team need, pitched the solution, built the resource from scratch, and drove adoption across a 100-person production team. It became something operators relied on under live, high-pressure conditions.",
   },
   sony: {
-    label: "EVIDENCE 02 / WORLD-BUILDING",
-    title: "Sony",
-    copy: "Directed and refined immersive experiences blending creative technology, spatial design, and audience behavior.",
+    label: "EVIDENCE 02 / AUDIENCE EXPERIENCE",
+    title: "From concept to an environment people could enter.",
+    copy: "At Sony, I directed immersive experiences for dome and spatial environments, then worked with engineers and creatives to test, refine, and prepare every element for the audience—not just the presentation deck.",
   },
   nbc: {
-    label: "EVIDENCE 03 / EXPERIMENTATION",
-    title: "NBCUniversal",
-    copy: "Tested new production technologies, built virtual-production assets, and shipped an original Apple Vision Pro AR experience.",
+    label: "EVIDENCE 03 / RESEARCH + DELIVERY",
+    title: "From emerging idea to shipped experience.",
+    copy: "At NBCUniversal, I researched and pitched new creative resources, helped move selected ideas into the team’s workflow, supported production from concept through execution, and shipped an original experience for Apple Vision Pro.",
   },
 };
 
