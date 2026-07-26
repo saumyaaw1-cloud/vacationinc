@@ -315,9 +315,9 @@ h1, h2, h3, p { margin-top: 0; }
 .proof-card span { font: 700 10px Arial, sans-serif; letter-spacing: .18em; }
 .proof-card strong { position: absolute; left: 24px; bottom: 54px; font-size: clamp(48px, 6vw, 86px); font-weight: 400; }
 .proof-card em { position: absolute; left: 26px; bottom: 24px; font-size: 15px; }
-.disney { background-color: #da6d5b; }
-.sony { background-color: #25718b; }
-.nbc { background-color: #6ba965; }
+.disney { background-color: #25718b; }
+.sony { background-color: #da6d5b; }
+.nbc { background-color: #76558f; }
 
 .business-case {
   padding: 105px 5vw 115px;
