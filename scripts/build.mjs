@@ -22,6 +22,11 @@ const files = {
     type: "image/jpeg",
     base64: true,
   },
+  "/assets/beach-ambience.mp3": {
+    body: (await readFile("assets/beach-ambience.mp3")).toString("base64"),
+    type: "audio/mpeg",
+    base64: true,
+  },
 };
 
 const worker = `

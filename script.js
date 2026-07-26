@@ -86,74 +86,64 @@ callCard.querySelector("button").addEventListener("click", () => {
 });
 
 const soundToggle = document.querySelector(".sound-toggle");
-let ambience;
+const ambience = document.querySelector("#pool-ambience");
+let volumeTimer;
+let ambienceReady;
 
-function createAmbience() {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  const context = new AudioContext();
-  const master = context.createGain();
-  const surfFilter = context.createBiquadFilter();
-  const surfGain = context.createGain();
-  const waveLfo = context.createOscillator();
-  const waveDepth = context.createGain();
-  const sampleCount = context.sampleRate * 8;
-  const noiseBuffer = context.createBuffer(2, sampleCount, context.sampleRate);
-
-  for (let channel = 0; channel < noiseBuffer.numberOfChannels; channel += 1) {
-    const samples = noiseBuffer.getChannelData(channel);
-    let smoothed = 0;
-    for (let index = 0; index < sampleCount; index += 1) {
-      const white = Math.random() * 2 - 1;
-      smoothed = smoothed * 0.985 + white * 0.015;
-      samples[index] = white * 0.22 + smoothed * 2.1;
-    }
+function loadAmbience() {
+  if (!ambienceReady) {
+    ambienceReady = fetch(ambience.dataset.src)
+      .then((response) => {
+        if (!response.ok) throw new Error("Ambience unavailable");
+        return response.blob();
+      })
+      .then((blob) => {
+        ambience.src = URL.createObjectURL(blob);
+      });
   }
-
-  const surf = context.createBufferSource();
-  surf.buffer = noiseBuffer;
-  surf.loop = true;
-
-  surfFilter.type = "lowpass";
-  surfFilter.frequency.value = 1150;
-  surfFilter.Q.value = 0.35;
-  surfGain.gain.value = 0.34;
-  master.gain.value = 0;
-
-  waveLfo.type = "sine";
-  waveLfo.frequency.value = 0.085;
-  waveDepth.gain.value = 0.19;
-
-  waveLfo.connect(waveDepth);
-  waveDepth.connect(surfGain.gain);
-  surf.connect(surfFilter);
-  surfFilter.connect(surfGain);
-  surfGain.connect(master);
-  master.connect(context.destination);
-
-  surf.start();
-  waveLfo.start();
-
-  return { context, master };
+  return ambienceReady;
 }
 
-function setAmbience(enabled) {
-  if (!ambience) ambience = createAmbience();
+loadAmbience().catch(() => {
+  soundToggle.textContent = "Sound unavailable";
+});
 
-  const now = ambience.context.currentTime;
-  ambience.master.gain.cancelScheduledValues(now);
-  ambience.master.gain.setValueAtTime(ambience.master.gain.value, now);
-  ambience.master.gain.linearRampToValueAtTime(enabled ? 0.28 : 0, now + 1.4);
-
-  soundToggle.setAttribute("aria-pressed", String(enabled));
-  soundToggle.textContent = `Pool ambience: ${enabled ? "On ♫" : "Off"}`;
+function fadeVolume(target, onComplete) {
+  clearInterval(volumeTimer);
+  const step = target > ambience.volume ? 0.04 : -0.04;
+  volumeTimer = setInterval(() => {
+    const next = ambience.volume + step;
+    const reached = step > 0 ? next >= target : next <= target;
+    ambience.volume = reached ? target : Math.max(0, Math.min(1, next));
+    if (reached) {
+      clearInterval(volumeTimer);
+      onComplete?.();
+    }
+  }, 55);
 }
 
 soundToggle.addEventListener("click", async () => {
   const enabled = soundToggle.getAttribute("aria-pressed") === "true";
-  const nextEnabled = !enabled;
-  if (!ambience) ambience = createAmbience();
-  if (nextEnabled && ambience.context.state === "suspended") {
-    ambience.context.resume();
+
+  if (enabled) {
+    soundToggle.setAttribute("aria-pressed", "false");
+    soundToggle.textContent = "Pool ambience: Off";
+    fadeVolume(0, () => ambience.pause());
+    return;
   }
-  setAmbience(nextEnabled);
+
+  try {
+    if (!ambience.src) {
+      soundToggle.textContent = "Waves ready—tap to play";
+      await loadAmbience();
+      return;
+    }
+    ambience.volume = 0;
+    await ambience.play();
+    soundToggle.setAttribute("aria-pressed", "true");
+    soundToggle.textContent = "Pool ambience: On ♫";
+    fadeVolume(0.72);
+  } catch {
+    soundToggle.textContent = "Tap again for sound";
+  }
 });
