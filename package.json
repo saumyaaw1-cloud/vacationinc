@@ -4,6 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "mkdir -p dist/server dist/.openai && cp index.html style.css script.js dist/ && cp server/index.js dist/server/index.js && cp .openai/hosting.json dist/.openai/hosting.json"
+    "build": "mkdir -p dist/server dist/.openai dist/assets && cp index.html style.css script.js dist/ && cp assets/poolside-orientation.jpg dist/assets/ && cp server/index.js dist/server/index.js && cp .openai/hosting.json dist/.openai/hosting.json"
   }
 }
