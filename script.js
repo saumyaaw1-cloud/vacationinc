@@ -88,25 +88,6 @@ callCard.querySelector("button").addEventListener("click", () => {
 const soundToggle = document.querySelector(".sound-toggle");
 const ambience = document.querySelector("#pool-ambience");
 let volumeTimer;
-let ambienceReady;
-
-function loadAmbience() {
-  if (!ambienceReady) {
-    ambienceReady = fetch(ambience.dataset.src)
-      .then((response) => {
-        if (!response.ok) throw new Error("Ambience unavailable");
-        return response.blob();
-      })
-      .then((blob) => {
-        ambience.src = URL.createObjectURL(blob);
-      });
-  }
-  return ambienceReady;
-}
-
-loadAmbience().catch(() => {
-  soundToggle.textContent = "Sound unavailable";
-});
 
 function fadeVolume(target, onComplete) {
   clearInterval(volumeTimer);
@@ -132,18 +113,14 @@ soundToggle.addEventListener("click", async () => {
     return;
   }
 
-  try {
-    if (!ambience.src) {
-      soundToggle.textContent = "Waves ready—tap to play";
-      await loadAmbience();
-      return;
-    }
-    ambience.volume = 0;
-    await ambience.play();
-    soundToggle.setAttribute("aria-pressed", "true");
-    soundToggle.textContent = "Pool ambience: On ♫";
-    fadeVolume(0.72);
-  } catch {
-    soundToggle.textContent = "Tap again for sound";
-  }
+  ambience.volume = 0;
+  const playback = ambience.play();
+  soundToggle.setAttribute("aria-pressed", "true");
+  soundToggle.textContent = "Pool ambience: On ♫";
+  fadeVolume(0.82);
+
+  playback.catch(() => {
+    soundToggle.setAttribute("aria-pressed", "false");
+    soundToggle.textContent = "Tap to allow sound";
+  });
 });

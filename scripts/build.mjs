@@ -22,9 +22,9 @@ const files = {
     type: "image/jpeg",
     base64: true,
   },
-  "/assets/beach-ambience.mp3": {
-    body: (await readFile("assets/beach-ambience.mp3")).toString("base64"),
-    type: "audio/mpeg",
+  "/assets/sunny-poolside.wav": {
+    body: (await readFile("assets/sunny-poolside.wav")).toString("base64"),
+    type: "audio/wav",
     base64: true,
   },
 };
