@@ -214,6 +214,15 @@ h1, h2, h3, p { margin-top: 0; }
   font-size: clamp(26px, 7.2vw, 108px);
   white-space: nowrap;
 }
+.department-answer {
+  margin: 0 0 .08em;
+  color: var(--coral);
+  font-family: "Segoe Script", "Lucida Handwriting", "Brush Script MT", cursive;
+  font-size: clamp(34px, 5vw, 74px);
+  font-weight: 600;
+  line-height: 1;
+  transform: rotate(-3deg);
+}
 .role-selector {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -470,6 +479,7 @@ dd { margin: 0; }
   .assignment { padding: 75px 14px 0; }
   .assignment-heading { display: block; }
   .assignment-heading h2 { font-size: clamp(26px, 7.2vw, 58px); }
+  .department-answer { margin-top: 18px; }
   .role-selector { grid-template-columns: 1fr; }
   .role + .role { border-left: 0; border-top: 1px solid var(--ink); }
   .role { min-height: 62px; }

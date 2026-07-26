@@ -1,18 +1,18 @@
 const roles = {
   launch: {
     kicker: "RECOMMENDED PLACEMENT: A",
-    title: "Put me where campaigns, events, partnerships, and production meet.",
-    proof: "I’ve already directed audience-facing experiences, shipped an original digital activation, and carried ambitious creative work from concept through live execution.",
+    title: "Build a brand world people want to step inside.",
+    proof: "I’ve directed audience-facing experiences, shaped visual narratives, and carried distinctive creative concepts from idea through execution.",
   },
   experience: {
     kicker: "RECOMMENDED PLACEMENT: B",
-    title: "Keep the ambitious idea—and everyone behind it—moving.",
-    proof: "At Disney, I bridge engineering, production, and creative—and launched a resource that became part of how a 100-person team works.",
+    title: "Find the opportunity. Make the case. Shape the plan.",
+    proof: "I’ve researched emerging behavior and technology, pitched recommendations to senior decision-makers, and translated complex possibilities into clear creative direction.",
   },
   special: {
     kicker: "RECOMMENDED PLACEMENT: C",
-    title: "Take the unexpected collaboration from pitch to poolside.",
-    proof: "I’ve researched and pitched emerging ideas, presented projects to senior executives, and translated unconventional concepts into finished experiences.",
+    title: "Carry the idea all the way to market.",
+    proof: "I’ve taken new ideas from pitch through adoption—aligning stakeholders, clarifying the value, and helping the finished work land with its intended audience.",
   },
 };
 
