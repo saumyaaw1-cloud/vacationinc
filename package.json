@@ -1,5 +1,8 @@
 {
   "name": "saumya-vacation-desk",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html style.css script.js dist/"
+  }
 }
