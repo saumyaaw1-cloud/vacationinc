@@ -2,7 +2,7 @@ const roles = {
   launch: {
     kicker: "RECOMMENDED PLACEMENT: A",
     title: "Make the idea easy to want—and easy to launch.",
-    proof: "Proof: pitched, built, and rolled out an AI production tool to 100 Disney teammates.",
+    proof: "Proof: pitched, built, and rolled out a new resource used by 100 Disney teammates.",
   },
   experience: {
     kicker: "RECOMMENDED PLACEMENT: B",
@@ -20,17 +20,17 @@ const evidence = {
   disney: {
     label: "EVIDENCE 01 / OWNERSHIP",
     title: "Disney",
-    copy: "Pitched, built, and shipped an AI production tool from scratch. It became a trusted workflow across a 100-person production team.",
+    copy: "Identified a team need, built a new resource from scratch, and rolled it out across a 100-person production team.",
   },
   sony: {
     label: "EVIDENCE 02 / WORLD-BUILDING",
     title: "Sony",
-    copy: "Directed and refined immersive experiences blending artificial intelligence, spatial design, and audience behavior.",
+    copy: "Directed and refined immersive experiences blending creative technology, spatial design, and audience behavior.",
   },
   nbc: {
     label: "EVIDENCE 03 / EXPERIMENTATION",
     title: "NBCUniversal",
-    copy: "Researched emerging tools, built virtual-production assets, and shipped an original Apple Vision Pro AR experience.",
+    copy: "Tested new production technologies, built virtual-production assets, and shipped an original Apple Vision Pro AR experience.",
   },
 };
 
