@@ -108,7 +108,7 @@ soundToggle.addEventListener("click", async () => {
 
   if (enabled) {
     soundToggle.setAttribute("aria-pressed", "false");
-    soundToggle.textContent = "Pool ambience: Off";
+    soundToggle.textContent = "Beach ambience: Off";
     fadeVolume(0, () => ambience.pause());
     return;
   }
@@ -116,7 +116,7 @@ soundToggle.addEventListener("click", async () => {
   ambience.volume = 0;
   const playback = ambience.play();
   soundToggle.setAttribute("aria-pressed", "true");
-  soundToggle.textContent = "Pool ambience: On ♫";
+  soundToggle.textContent = "Beach ambience: On ♫";
   fadeVolume(0.82);
 
   playback.catch(() => {
