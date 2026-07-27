@@ -198,9 +198,7 @@ h1, h2, h3, p { margin-top: 0; }
 .numbers p { margin: 0; max-width: 210px; font-size: 17px; line-height: 1.25; }
 .assignment { padding: 100px 4vw 0; }
 .assignment-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
+  display: block;
   margin-bottom: 54px;
 }
 .assignment-heading h2, .close h2 {
@@ -215,12 +213,14 @@ h1, h2, h3, p { margin-top: 0; }
   white-space: nowrap;
 }
 .department-answer {
-  margin: 0 0 .08em;
+  width: 100%;
+  margin: 26px 0 0;
   color: var(--coral);
   font-family: "Segoe Script", "Lucida Handwriting", "Brush Script MT", cursive;
-  font-size: clamp(34px, 5vw, 74px);
+  font-size: clamp(62px, 9vw, 132px);
   font-weight: 600;
   line-height: 1;
+  text-align: center;
   transform: rotate(-3deg);
 }
 .role-selector {
@@ -232,7 +232,7 @@ h1, h2, h3, p { margin-top: 0; }
   min-height: 78px;
   border: 0;
   background: transparent;
-  text-align: left;
+  text-align: center;
   padding: 0 24px;
   font-size: 18px;
   cursor: pointer;
@@ -274,6 +274,11 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .role-card.swap { transform: rotate(1.5deg) scale(.98); }
 .role-card h3 { margin-bottom: 22px; font-size: clamp(38px, 5vw, 72px); line-height: .95; font-weight: 400; letter-spacing: -.04em; }
+.role-card.compact-title h3 {
+  font-size: clamp(24px, 4.2vw, 62px);
+  line-height: 1.08;
+  white-space: pre;
+}
 .role-card p:last-child { margin: 0; font-size: 19px; line-height: 1.4; }
 .float {
   position: absolute;

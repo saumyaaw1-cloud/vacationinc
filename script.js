@@ -6,7 +6,7 @@ const roles = {
   },
   experience: {
     kicker: "RECOMMENDED PLACEMENT: B",
-    title: "Find the opportunity. Make the case. Shape the plan.",
+    title: "Find the opportunity.\nMake the case.\nShape the plan.",
     proof: "I’ve researched emerging behavior and technology, pitched recommendations to senior decision-makers, and translated complex possibilities into clear creative direction.",
   },
   special: {
@@ -44,6 +44,7 @@ roleButtons.forEach((button) => {
       item.classList.toggle("active", item === button);
       item.setAttribute("aria-selected", String(item === button));
     });
+    roleCard.classList.toggle("compact-title", button.dataset.role === "experience");
     roleCard.classList.add("swap");
     setTimeout(() => {
       document.querySelector("#role-kicker").textContent = selected.kicker;
