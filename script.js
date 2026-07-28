@@ -1,7 +1,7 @@
 const roles = {
   launch: {
     kicker: "RECOMMENDED PLACEMENT: 01",
-    title: "Build a brand world people want to step inside.",
+    title: "Build a world people want to step inside.",
     proof: "I’ve directed audience-facing experiences, shaped visual narratives, and carried distinctive creative concepts from idea through execution.",
   },
   experience: {
