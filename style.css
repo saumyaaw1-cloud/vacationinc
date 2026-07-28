@@ -467,13 +467,25 @@ h1, h2, h3, p { margin-top: 0; }
   border-left: 1px solid var(--ink);
 }
 .business-case-grid span {
-  font: 700 10px/1.2 Arial, sans-serif;
-  letter-spacing: .16em;
+  font: 800 clamp(16px, 1.5vw, 22px)/1 Arial, sans-serif;
+  letter-spacing: .08em;
+}
+.business-case-grid article:nth-child(1) span,
+.business-case-grid article:nth-child(1) h3 {
+  color: var(--coral);
+}
+.business-case-grid article:nth-child(2) span,
+.business-case-grid article:nth-child(2) h3 {
+  color: #238b98;
+}
+.business-case-grid article:nth-child(3) span,
+.business-case-grid article:nth-child(3) h3 {
+  color: #76528f;
 }
 .business-case-grid h3 {
-  margin: 56px 0 18px;
+  margin: 42px 0 18px;
   font-size: clamp(28px, 3vw, 45px);
-  font-weight: 400;
+  font-weight: 600;
   line-height: .95;
   letter-spacing: -.035em;
 }
