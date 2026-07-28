@@ -114,6 +114,7 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .hero h1 span {
   display: block;
+  margin-top: .08em;
   color: var(--yellow);
   font-family: "Brush Script MT", "Segoe Script", cursive;
   font-size: .76em;
