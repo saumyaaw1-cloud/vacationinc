@@ -381,13 +381,46 @@ h1, h2, h3, p { margin-top: 0; }
   background: #dfe4dc;
 }
 .proof-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 0 8px 28px;
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  margin: 0 8px 32px;
+  padding: 20px;
 }
-.proof-heading p { margin: 0; }
-.proof-heading > p:last-child { font-style: italic; }
+.proof-heading h2 {
+  margin: 0;
+  font-family: Futura, "Century Gothic", "Avenir Next", Arial, sans-serif;
+  font-size: clamp(45px, 6.2vw, 94px);
+  font-weight: 300;
+  line-height: .95;
+  letter-spacing: -.07em;
+  text-align: center;
+}
+.clipper-word {
+  position: relative;
+  display: inline-block;
+}
+.clipper-word::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 7%;
+  right: -12%;
+  top: 25%;
+  border-top: 4px dashed currentColor;
+}
+.clipper-word::before {
+  content: "✂";
+  position: absolute;
+  z-index: 3;
+  right: -18%;
+  top: -62%;
+  font-family: Arial, sans-serif;
+  font-size: .85em;
+  font-weight: 400;
+  line-height: 1;
+  transform: rotate(-10deg);
+}
 .proof-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -690,8 +723,10 @@ dd { margin: 0; }
   .role-stage { min-height: 510px; }
   .role-card { width: 86%; padding: 28px; }
   .proof { padding: 80px 14px; }
-  .proof-heading { display: block; margin-bottom: 24px; }
-  .proof-heading > p:last-child { margin-top: 8px; }
+  .proof-heading { min-height: 140px; margin-bottom: 24px; padding: 10px 3px; }
+  .proof-heading h2 { font-size: clamp(39px, 12vw, 58px); }
+  .clipper-word::after { right: -5%; border-top-width: 3px; }
+  .clipper-word::before { right: -7%; top: -55%; }
   .proof-grid { grid-template-columns: 1fr; }
   .proof-card { min-height: 340px; }
   .business-case { padding: 75px 14px 80px; }
