@@ -183,36 +183,24 @@ h1, h2, h3, p { margin-top: 0; }
   overflow: hidden;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
-  background: var(--cream);
+  background: var(--yellow);
   color: var(--ink);
 }
 .brand-track {
   display: flex;
   align-items: center;
   width: max-content;
-  padding: 25px 0 27px;
-  animation: brand-scroll 22s linear infinite;
+  padding: 12px 0 15px;
+  animation: brand-scroll 18s linear infinite;
 }
 .brand-track span {
-  min-width: clamp(300px, 33vw, 520px);
-  text-align: center;
-}
-.brand-disney {
-  font-family: "Segoe Script", "Lucida Handwriting", "Brush Script MT", cursive;
-  font-size: clamp(38px, 4.5vw, 68px);
-  font-weight: 600;
-  transform: rotate(-3deg);
-}
-.brand-sony {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(34px, 4vw, 62px);
-  letter-spacing: .08em;
-}
-.brand-nbc {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(26px, 3.2vw, 50px);
-  font-weight: 700;
-  letter-spacing: -.055em;
+  display: block;
+  white-space: nowrap;
+  font-family: "Bodoni 72 Smallcaps", Didot, "Times New Roman", serif;
+  font-size: clamp(38px, 4.25vw, 66px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.045em;
 }
 @keyframes brand-scroll {
   to { transform: translateX(-50%); }
