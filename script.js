@@ -1,16 +1,16 @@
 const roles = {
   launch: {
-    kicker: "RECOMMENDED PLACEMENT: A",
+    kicker: "RECOMMENDED PLACEMENT: 01",
     title: "Build a brand world people want to step inside.",
     proof: "I’ve directed audience-facing experiences, shaped visual narratives, and carried distinctive creative concepts from idea through execution.",
   },
   experience: {
-    kicker: "RECOMMENDED PLACEMENT: B",
+    kicker: "RECOMMENDED PLACEMENT: 02",
     title: "Find the opportunity.\nMake the case.\nShape the plan.",
     proof: "I’ve researched emerging behavior and technology, pitched recommendations to senior decision-makers, and translated complex possibilities into clear creative direction.",
   },
   special: {
-    kicker: "RECOMMENDED PLACEMENT: C",
+    kicker: "RECOMMENDED PLACEMENT: 03",
     title: "Carry the idea all the way to market.",
     proof: "I’ve taken new ideas from pitch through adoption—aligning stakeholders, clarifying the value, and helping the finished work land with its intended audience.",
   },

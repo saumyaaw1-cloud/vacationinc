@@ -179,6 +179,35 @@ h1, h2, h3, p { margin-top: 0; }
   text-transform: uppercase;
 }
 
+.brand-carousel {
+  overflow: hidden;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--coral);
+  color: white;
+}
+.brand-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 16px 0;
+  animation: brand-scroll 18s linear infinite;
+}
+.brand-track span {
+  min-width: 270px;
+  font-size: clamp(30px, 3.6vw, 58px);
+  font-style: italic;
+  text-align: center;
+}
+.brand-track i {
+  color: var(--yellow);
+  font-style: normal;
+  font-size: 22px;
+}
+@keyframes brand-scroll {
+  to { transform: translateX(-50%); }
+}
+
 .numbers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -209,13 +238,15 @@ h1, h2, h3, p { margin-top: 0; }
   font-weight: 400;
 }
 .assignment-heading h2 {
+  width: fit-content;
+  margin-inline: auto;
   font-size: clamp(26px, 7.2vw, 108px);
   text-align: center;
   white-space: nowrap;
 }
 .department-answer {
-  width: 100%;
-  margin: 26px 0 0;
+  width: fit-content;
+  margin: 26px auto 0;
   color: var(--coral);
   font-family: "Segoe Script", "Lucida Handwriting", "Brush Script MT", cursive;
   font-size: clamp(62px, 9vw, 132px);
@@ -317,13 +348,35 @@ h1, h2, h3, p { margin-top: 0; }
   background:
     repeating-linear-gradient(135deg, transparent 0 25px, rgba(255,255,255,.35) 25px 27px);
 }
+.proof-card::after {
+  content: attr(data-monogram);
+  position: absolute;
+  top: 34px;
+  right: -8px;
+  color: rgba(255,255,255,.13);
+  font-size: clamp(180px, 22vw, 330px);
+  font-weight: 700;
+  line-height: .75;
+  letter-spacing: -.12em;
+}
 .proof-card span, .proof-card strong, .proof-card em { position: relative; z-index: 1; display: block; }
 .proof-card span { font: 700 10px Arial, sans-serif; letter-spacing: .18em; }
 .proof-card strong { position: absolute; left: 24px; bottom: 54px; font-size: clamp(48px, 6vw, 86px); font-weight: 400; }
 .proof-card em { position: absolute; left: 26px; bottom: 24px; font-size: 15px; }
-.disney { background-color: #25718b; }
-.sony { background-color: #da6d5b; }
-.nbc { background-color: #76558f; }
+.disney {
+  background:
+    radial-gradient(circle at 22% 20%, rgba(255,255,255,.2) 0 2px, transparent 3px),
+    linear-gradient(145deg, #307da0, #173f68);
+  background-size: 46px 46px, auto;
+}
+.sony {
+  background: linear-gradient(145deg, #ef7a64 0 52%, #c24f48 52% 100%);
+}
+.nbc {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(243,207,102,.35), transparent 28%),
+    linear-gradient(145deg, #8a67a4, #553c75);
+}
 
 .business-case {
   padding: 105px 5vw 115px;
@@ -515,4 +568,5 @@ dd { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+  .brand-track { transform: none; }
 }
