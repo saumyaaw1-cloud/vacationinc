@@ -179,21 +179,40 @@ h1, h2, h3, p { margin-top: 0; }
   text-transform: uppercase;
 }
 
-.brand-carousel {
-  overflow: hidden;
+.identity-carousel {
+  display: flex;
+  align-items: stretch;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
   background: var(--yellow);
   color: var(--ink);
 }
-.brand-track {
+.identity-intro {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 13px 28px 15px;
+  border-right: 1px solid var(--ink);
+  background: var(--cream);
+  font-size: clamp(23px, 2.3vw, 36px);
+  font-style: italic;
+  white-space: nowrap;
+}
+.identity-window {
+  min-width: 0;
+  overflow: hidden;
+}
+.identity-track {
   display: flex;
   align-items: center;
   width: max-content;
   padding: 9px 0 11px;
-  animation: brand-scroll 24s linear infinite;
+  animation: identity-scroll 24s linear infinite;
 }
-.brand-track span {
+.identity-track span {
   display: block;
   white-space: nowrap;
   font-family: "Bodoni 72 Smallcaps", Didot, "Times New Roman", serif;
@@ -202,7 +221,7 @@ h1, h2, h3, p { margin-top: 0; }
   line-height: 1;
   letter-spacing: .015em;
 }
-@keyframes brand-scroll {
+@keyframes identity-scroll {
   to { transform: translateX(-50%); }
 }
 
@@ -534,6 +553,12 @@ dd { margin: 0; }
   .hero-copy { width: auto; padding: 240px 20px 130px; }
   .hero h1 { font-size: clamp(58px, 20vw, 82px); }
   .hero-sub { font-size: 18px; }
+  .identity-carousel { display: block; }
+  .identity-intro {
+    justify-content: center;
+    border-right: 0;
+    border-bottom: 1px solid var(--ink);
+  }
   .phone { right: 20px; bottom: 35px; width: 140px; height: 60px; }
   .numbers { grid-template-columns: 1fr; }
   .numbers article + article { border-left: 0; border-top: 1px solid var(--ink); }
@@ -566,5 +591,5 @@ dd { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
-  .brand-track { transform: none; }
+  .identity-track { transform: none; }
 }
