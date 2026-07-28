@@ -23,9 +23,9 @@ const evidence = {
     copy: "At Disney, I designed and delivered a suite of 2D and 3D brand visuals and motion graphics for the NBA Finals, translating campaign direction into broadcast-ready assets.",
   },
   sony: {
-    label: "EVIDENCE 02 / AUDIENCE EXPERIENCE",
-    title: "From concept to an environment people could enter.",
-    copy: "At Sony, I directed immersive experiences for dome and spatial environments, then worked with engineers and creatives to test, refine, and prepare every element for the audience.",
+    label: "EVIDENCE 02 / R&D + STRATEGY",
+    title: "Research with a $100M signal.",
+    copy: "At Sony, I developed an R&D prototype that helped inform the company’s immersive entertainment strategy, culminating in a $100M strategic investment in Cosm.",
   },
   nbc: {
     label: "EVIDENCE 03 / RESEARCH + DELIVERY",
