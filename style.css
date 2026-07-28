@@ -232,15 +232,22 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .experience-logos .logo-disney { height: clamp(32px, 3vw, 44px); }
 .experience-logos .logo-sony { height: clamp(22px, 2vw, 30px); }
-.experience-logos .logo-nbcu { height: clamp(25px, 2.3vw, 34px); }
+.experience-logos .logo-nbcu {
+  height: clamp(25px, 2.3vw, 34px);
+  filter: grayscale(1) brightness(0);
+}
 .bafta-lockup {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #000;
   font: 700 clamp(22px, 2vw, 30px)/1 Arial, sans-serif;
   letter-spacing: .08em;
 }
-.experience-logos .logo-bafta { height: clamp(36px, 3.3vw, 48px); }
+.experience-logos .logo-bafta {
+  height: clamp(36px, 3.3vw, 48px);
+  filter: grayscale(1) brightness(0);
+}
 .logo-divider {
   display: block;
   font-size: 13px;
