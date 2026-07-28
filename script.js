@@ -2,17 +2,17 @@ const roles = {
   launch: {
     placement: "01",
     title: "Brand",
-    proof: "From Disney to Sony and NBCUniversal, I've helped shape immersive brand worlds that invite audiences to participate, connect, and keep coming back for more.",
+    proof: "From <strong>Disney to Sony and NBCUniversal</strong>, I've helped shape <strong>immersive brand worlds</strong> that invite audiences to <strong>participate, connect, and keep coming back</strong> for more.",
   },
   experience: {
     placement: "02",
     title: "Strategy",
-    proof: "I love spotting what's next. At Sony, I developed an R&D prototype that helped inform the company's immersive entertainment strategy, culminating in a $100M investment in Cosm.",
+    proof: "I love spotting <strong>what's next.</strong> At Sony, I developed an R&amp;D prototype that helped inform the company's <strong>immersive entertainment strategy</strong>, culminating in a <strong>$100M investment in Cosm.</strong>",
   },
   special: {
     placement: "03",
     title: "Go-to-Market",
-    proof: "I've led cross-functional teams and brought ambitious projects across the finish line. From award-winning campaigns to large-scale launches, keeping people aligned and the work moving until it reached its audience.",
+    proof: "I've <strong>led cross-functional teams</strong> and brought ambitious projects across the finish line. From <strong>award-winning campaigns to large-scale launches</strong>, keeping people aligned and the work moving until it reached its audience.",
   },
 };
 
@@ -48,7 +48,7 @@ roleButtons.forEach((button) => {
     setTimeout(() => {
       document.querySelector("#placement-number").textContent = selected.placement;
       document.querySelector("#role-title").textContent = selected.title;
-      document.querySelector("#role-proof").textContent = selected.proof;
+      document.querySelector("#role-proof").innerHTML = selected.proof;
       roleCard.classList.remove("swap");
     }, 170);
   });

@@ -375,7 +375,7 @@ h1, h2, h3, p { margin-top: 0; }
   animation: drift 5s ease-in-out infinite;
 }
 .float-one span {
-  font: 800 8px/1.15 Arial, sans-serif;
+  font: 800 10px/1.15 Arial, sans-serif;
   letter-spacing: .06em;
   text-transform: uppercase;
 }
