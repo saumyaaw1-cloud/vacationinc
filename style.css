@@ -190,17 +190,17 @@ h1, h2, h3, p { margin-top: 0; }
   display: flex;
   align-items: center;
   width: max-content;
-  padding: 12px 0 15px;
-  animation: brand-scroll 18s linear infinite;
+  padding: 9px 0 11px;
+  animation: brand-scroll 24s linear infinite;
 }
 .brand-track span {
   display: block;
   white-space: nowrap;
   font-family: "Bodoni 72 Smallcaps", Didot, "Times New Roman", serif;
-  font-size: clamp(38px, 4.25vw, 66px);
+  font-size: clamp(22px, 2.5vw, 38px);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -.045em;
+  letter-spacing: .015em;
 }
 @keyframes brand-scroll {
   to { transform: translateX(-50%); }
