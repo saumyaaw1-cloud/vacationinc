@@ -18,9 +18,9 @@ const roles = {
 
 const evidence = {
   disney: {
-    label: "EVIDENCE 01 / OWNERSHIP + ADOPTION",
-    title: "From zero to 100 users.",
-    copy: "At Disney, I spotted a real team need, pitched the solution, built the resource from scratch, and drove adoption across a 100-person production team. It became something operators relied on under live, high-pressure conditions.",
+    label: "EVIDENCE 01 / BRAND + MOTION",
+    title: "Brand work built for the NBA Finals.",
+    copy: "At Disney, I designed and delivered a suite of 2D and 3D brand visuals and motion graphics for the NBA Finals, translating campaign direction into broadcast-ready assets.",
   },
   sony: {
     label: "EVIDENCE 02 / AUDIENCE EXPERIENCE",
