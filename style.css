@@ -215,7 +215,7 @@ h1, h2, h3, p { margin-top: 0; }
   align-items: center;
   width: max-content;
   padding: 0;
-  animation: identity-scroll 24s linear infinite;
+  animation: identity-scroll 14s linear infinite;
 }
 .identity-track span {
   display: block;
@@ -596,5 +596,5 @@ dd { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
-  .identity-track { transform: none; }
+  .identity-track { animation: identity-scroll 18s linear infinite !important; }
 }
