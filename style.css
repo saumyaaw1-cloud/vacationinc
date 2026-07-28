@@ -181,7 +181,8 @@ h1, h2, h3, p { margin-top: 0; }
 
 .identity-carousel {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  min-height: 70px;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
   background: var(--yellow);
@@ -192,6 +193,7 @@ h1, h2, h3, p { margin-top: 0; }
   z-index: 2;
   display: flex;
   align-items: center;
+  align-self: stretch;
   flex: 0 0 auto;
   margin: 0;
   padding: 13px 28px 15px;
@@ -202,6 +204,9 @@ h1, h2, h3, p { margin-top: 0; }
   white-space: nowrap;
 }
 .identity-window {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
   min-width: 0;
   overflow: hidden;
 }
@@ -209,7 +214,7 @@ h1, h2, h3, p { margin-top: 0; }
   display: flex;
   align-items: center;
   width: max-content;
-  padding: 9px 0 11px;
+  padding: 0;
   animation: identity-scroll 24s linear infinite;
 }
 .identity-track span {
