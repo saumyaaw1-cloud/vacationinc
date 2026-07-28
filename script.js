@@ -12,7 +12,7 @@ const roles = {
   special: {
     placement: "03",
     title: "Go-to-Market",
-    proof: "I've <strong>led cross-functional teams</strong> and brought ambitious projects across the finish line. From <strong>award-winning campaigns to large-scale launches</strong>, keeping people aligned and the work moving until it reached its audience.",
+    proof: "I've <strong>led cross-functional teams</strong> and brought ambitious projects across the finish line. From <strong>award-winning campaigns to large-scale launches</strong>, I've kept people aligned and the work moving until it reached its audience.",
   },
 };
 
