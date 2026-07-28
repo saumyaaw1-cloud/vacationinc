@@ -355,39 +355,33 @@ h1, h2, h3, p { margin-top: 0; }
 .role-card.swap { transform: rotate(1.5deg) scale(.98); }
 .role-card h3 { margin: 0 0 22px; font-size: clamp(48px, 6vw, 82px); line-height: .95; font-weight: 400; letter-spacing: -.04em; }
 .role-card p:last-child { margin: 0; font-size: 19px; line-height: 1.4; }
-.float {
+.placement-note {
   position: absolute;
+  top: 24px;
+  left: 24px;
   z-index: 1;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
   border: 1px solid var(--ink);
-  border-radius: 50%;
   background: var(--yellow);
-  font-style: italic;
+  box-shadow: 5px 5px 0 rgba(23,56,74,.22);
+  transform: rotate(-1deg);
 }
-.float-one {
-  width: 124px;
-  height: 124px;
-  left: 5%;
-  top: 17%;
-  padding: 16px;
-  font-style: normal;
-  text-align: center;
-  animation: drift 5s ease-in-out infinite;
-}
-.float-one span {
-  font: 800 10px/1.15 Arial, sans-serif;
+.placement-note span {
+  font: 800 10px/1 Arial, sans-serif;
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-.float-one strong {
-  display: block;
-  margin-top: 4px;
-  font-size: 28px;
+.placement-note strong {
+  padding-left: 12px;
+  border-left: 1px solid var(--ink);
+  color: var(--coral);
+  font-size: 24px;
   font-weight: 400;
   line-height: 1;
 }
-@keyframes drift { 50% { transform: translateY(18px) rotate(8deg); } }
 
 .proof {
   padding: 72px 3vw 82px;
