@@ -2,17 +2,17 @@ const roles = {
   launch: {
     placement: "01",
     title: "Brand",
-    proof: "I shape audience-facing experiences, translate creative ideas into cohesive brand moments, and help bring campaigns from concept to execution with consistency and intention.",
+    proof: "From Disney to Sony and NBCUniversal, I've helped shape immersive brand worlds that invite audiences to participate, connect, and keep coming back for more.",
   },
   experience: {
     placement: "02",
     title: "Strategy",
-    proof: "I connect audience behavior, business objectives, and emerging trends to uncover opportunities worth pursuing. Then, I turn those insights into a clear, actionable direction.",
+    proof: "I love spotting what's next. At Sony, I developed an R&D prototype that helped inform the company's immersive entertainment strategy, culminating in a $100M investment in Cosm.",
   },
   special: {
     placement: "03",
     title: "Go-to-Market",
-    proof: "I bring ideas out of the deck and into the world, aligning teams, clarifying positioning, and carrying launches from concept to audience.",
+    proof: "I've led cross-functional teams and brought ambitious projects across the finish line. From award-winning campaigns to large-scale launches, keeping people aligned and the work moving until it reached its audience.",
   },
 };
 
