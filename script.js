@@ -1,18 +1,18 @@
 const roles = {
   launch: {
-    kicker: "RECOMMENDED PLACEMENT: 01",
-    title: "Build a world people want to step inside.",
-    proof: "I’ve directed audience-facing experiences, shaped visual narratives, and carried distinctive creative concepts from idea through execution.",
+    placement: "01",
+    title: "Brand",
+    proof: "I shape audience-facing experiences, translate creative ideas into cohesive brand moments, and help bring campaigns from concept to execution with consistency and intention.",
   },
   experience: {
-    kicker: "RECOMMENDED PLACEMENT: 02",
-    title: "Find the opportunity.\nMake the case.\nShape the plan.",
-    proof: "I’ve researched emerging behavior and technology, pitched recommendations to senior decision-makers, and translated complex possibilities into clear creative direction.",
+    placement: "02",
+    title: "Strategy",
+    proof: "I connect audience behavior, business objectives, and emerging trends to uncover opportunities worth pursuing. Then, I turn those insights into a clear, actionable direction.",
   },
   special: {
-    kicker: "RECOMMENDED PLACEMENT: 03",
-    title: "Carry the idea all the way to market.",
-    proof: "I’ve taken new ideas from pitch through adoption—aligning stakeholders, clarifying the value, and helping the finished work land with its intended audience.",
+    placement: "03",
+    title: "Go-to-Market",
+    proof: "I bring ideas out of the deck and into the world, aligning teams, clarifying positioning, and carrying launches from concept to audience.",
   },
 };
 
@@ -44,10 +44,9 @@ roleButtons.forEach((button) => {
       item.classList.toggle("active", item === button);
       item.setAttribute("aria-selected", String(item === button));
     });
-    roleCard.classList.toggle("compact-title", button.dataset.role === "experience");
     roleCard.classList.add("swap");
     setTimeout(() => {
-      document.querySelector("#role-kicker").textContent = selected.kicker;
+      document.querySelector("#placement-number").textContent = selected.placement;
       document.querySelector("#role-title").textContent = selected.title;
       document.querySelector("#role-proof").textContent = selected.proof;
       roleCard.classList.remove("swap");
